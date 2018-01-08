@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<ul>
+{% for user in user_list %}
+    <li><a href="{% url 'results' user.tag %}">{{ user.tag }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>

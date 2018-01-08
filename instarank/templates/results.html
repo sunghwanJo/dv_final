@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <h1>Word</h1>
+    {{ words }}
+
+    <h1>similar_images ({{ user_data.similar_images_size }} /{{ user_data.article_size }})</h1>
+    <img src="{{ user_data.user_profile_image }}" height="200" width="200">
+    {% for rate, image_link in user_data.similar_images %}
+        <li>
+            diff : {{ rate }}
+            <img src="{{ image_link }}" height="200" width="200">
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
